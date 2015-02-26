@@ -20,7 +20,7 @@ namespace PasswordGenerator
             {
                 Console.WriteLine("How long do you want your password {0} to be ?" , n);
                 var m = int.Parse(Console.ReadLine());
-                result += MakePassword(m) + " ";
+                result += PasswordGenerator.MakePassword.MakePassword(m) + " ";
                 Console.Clear();
 
             }
@@ -38,22 +38,5 @@ namespace PasswordGenerator
 
 
         }
-
-        private static string MakePassword(int length)
-        {
-            var password = "";
-
-            var ran = new Random();
-            for (var i = 0; i < length; i++)
-            {
-                var num = ran.Next(0, 26);
-                var let = (char)('a' + num);
-                password += let;
-            }
-
-
-            return password;
-        }
-
     }
 }
