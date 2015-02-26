@@ -20,3 +20,5 @@ Check what challenges have been done so far and what languages are up to date.
 
 
 Be sure to visit at www.reddit.com/r/dailyprogrammer
+Also check out the Pages site: http://lewisj489.github.io/dailyprogrammer/
+To change the website, check the pages branch.
