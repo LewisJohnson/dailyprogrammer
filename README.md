@@ -12,7 +12,7 @@ Check what challenges have been done so far and what languages are up to date.
 
 |             |Easy|Inter..|Hard|Weekly|
 |-------------|--- |------------|----|------|
-|Challenge    |4  |0            |0   |0     |
+|Challenge    |9  |0            |0   |0     |
 |C#           |✓   |✓          |✓   |✓     |     
 |C++          |✗   |✗           |✗   |✗     |  
 |Java         |✗   |✗           |✗   |✗     | 
