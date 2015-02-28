@@ -2,7 +2,7 @@
 {
     using System;
 
-    class MakePassword
+    static class PasswordGenerator
     {
         public static string MakePassword(int length)
         {
