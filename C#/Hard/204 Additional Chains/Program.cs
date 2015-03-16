@@ -10,23 +10,69 @@ namespace _204_Additional_Chains
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Initial Number");
-            var initial = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Final Number");
-            var final = int.Parse(Console.ReadLine());
+            //long[] chain = new long[input.nextInt() + 1];
 
-            ChainMeUp(initial, final);
+            //long goal = input.nextLong();
 
+            //chain[0] = 1;
+
+            //getChain(chain, 1, goal);
+
+            //for (long num:chain)
+            //{
+            //    output.println(num);
+            //}
+
+
+            long[] chain = new long[long.Parse(Console.ReadLine() + 1)];
+
+            long final = int.Parse(Console.ReadLine());
+
+            MakeSomeTreeChainThing(chain, 1, final);
+
+            foreach (var item in chain)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.Read();
         }
 
-        private static void ChainMeUp(int initial, int final)
+        private static bool MakeSomeTreeChainThing(long[] chainList, int stepsize, long finalnumber)
         {
-            var wickedNumberList = new List<int>();
-            for (int i = 0; i < final; i++)
+            for (var firstIndex = stepsize - 1; firstIndex >= 0; firstIndex--)
             {
-                
+                for (var secondIndex = stepsize - 1; secondIndex >= 0; secondIndex--)
+                {
+                    var curSum = chainList[firstIndex] + chainList[secondIndex];
+                    if (curSum <= chainList[stepsize - 1])
+                    {
+                        break;
+                    }
+                    if (curSum > finalnumber || (curSum < finalnumber >> (chainList.Length - 1 - stepsize)))
+                    {
+                        continue;
+                    }
+                    if (curSum == finalnumber)
+                    {
+                        for (var fillIndex = stepsize; fillIndex <= chainList.Length; fillIndex++)
+                        {
+                            chainList[fillIndex] = curSum;
+                        }
+                        return true;
+                    }
+                    chainList[stepsize] = curSum;
+                    if (stepsize < chainList.Length)
+                    {
+                        if (MakeSomeTreeChainThing(chainList, stepsize + 1, finalnumber))
+                        {
+                            return true;
+                        }
+                    }
+                }
             }
+            return true;
         }
     }
 }
