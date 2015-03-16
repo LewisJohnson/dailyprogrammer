@@ -3,15 +3,10 @@ using System.Collections.Generic;
 
 namespace RecurrenceRelations
 {
-
     internal static class Program
     {
-        private static Func<int, int, int> func;
-
-        private static void Main(string[] args)
+        private static void Main()
         {
-            int final = 0;
-
             Console.WriteLine("Expression");
             var ex = Console.ReadLine();
 
@@ -21,10 +16,8 @@ namespace RecurrenceRelations
             Console.WriteLine("How many terms do you want?");
             var n = int.Parse(Console.ReadLine());
 
-            int[] terms = new int[n];
+            var terms = new int[n];
             terms[0] = f;
-
-            var tmp = f;
 
             Console.WriteLine("Term 0: {0}", terms[0]);
 
@@ -40,22 +33,20 @@ namespace RecurrenceRelations
                     terms[i] = Calc(ex, terms[i - 1]);
                     Console.WriteLine("Term {0}: {1}", i + 1, terms[i]);
                 }
-
             }
 
-            
             Console.ReadLine();
         }
 
         private static int Calc(string expression, int number)
         {
             var operators = new Dictionary<char, Func<int, int, int>>()
-            {
-                {'+', (a, b) => a + b},
-                {'-', (a, b) => a - b},
-                {'/', (a, b) => a / b},
-                {'*', (a, b) => a * b},
-            };
+                                {
+                                    { '+', (a, b) => a + b },
+                                    { '-', (a, b) => a - b },
+                                    { '/', (a, b) => a / b },
+                                    { '*', (a, b) => a * b },
+                                };
 
             if (expression.Contains(" "))
             {
@@ -77,6 +68,5 @@ namespace RecurrenceRelations
             number = operators[op2](number, amt2);
             return number;
         }
-
     }
 }
