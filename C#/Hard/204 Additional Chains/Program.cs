@@ -11,19 +11,6 @@ namespace _204_Additional_Chains
         private static void Main(string[] args)
         {
 
-            //long[] chain = new long[input.nextInt() + 1];
-
-            //long goal = input.nextLong();
-
-            //chain[0] = 1;
-
-            //getChain(chain, 1, goal);
-
-            //for (long num:chain)
-            //{
-            //    output.println(num);
-            //}
-
 
             long[] chain = new long[long.Parse(Console.ReadLine() + 1)];
 
