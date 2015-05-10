@@ -1,3 +1,4 @@
+// Reddit user/Author: heliolatry
 public static void main(String[] args) {
         int bottles = 99;
 
