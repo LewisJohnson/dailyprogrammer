@@ -1,3 +1,4 @@
+// Reddit user/Author: mazzer
 public static void main(String[] args) {
     StringBuilder result = new StringBuilder();
     final int blockSize = 3;
