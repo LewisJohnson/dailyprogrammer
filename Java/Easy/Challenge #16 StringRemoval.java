@@ -1,3 +1,4 @@
+// Reddit user/Author: turboemu
 public static void main(String[] args) {
                 Scanner s = new Scanner(System.in);
                 System.out.println("What string do you want to remove letter from?");
