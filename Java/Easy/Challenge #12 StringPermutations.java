@@ -14,7 +14,7 @@ public static void main(String[] args) {
 
     System.out.println("perms");
 
-    for (String x:perm(perm)){
+    for (String x : perm(perm)){
         System.out.println(x);
     }
 }

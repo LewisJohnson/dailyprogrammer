@@ -1,3 +1,4 @@
+ // Reddit user/Author: xamikeax
  public static void main (String[]args) {
         int dayOfMonth = 0, numMonth, totalDays = 0, answer;
         int[] Month = {31,28,31,30,31,30,31,31,30,31,30,31};
