@@ -9,6 +9,3 @@ Be sure to visit at www.reddit.com/r/dailyprogrammer
 
 IRC at : #reddit-dailyprogrammer
 Come and join us to chat about programming !
-
-Also check out the Pages site: http://lewisj489.github.io/dailyprogrammer/
-To change the website, check the pages branch.
